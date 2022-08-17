@@ -21,7 +21,7 @@ const addNote = (nombre, correo,direccion) => {
 
 const removeNote = (title) => {
     const notes = loadNotes()
-    const notesToKeep = notes.filter((note) => note.title !== title)
+    const notesToKeep = notes.filter((note) => note.nombre !== title)
 
     if (notes.length > notesToKeep.length) {
         console.log(chalk.green.inverse('Note removed!'))
@@ -37,7 +37,7 @@ const listNotes = () => {
     console.log(chalk.inverse('Your notes'))
 
     notes.forEach((note) => {
-        console.log(note.title)
+        console.log("---nombre:"+note.nombre +" ---correo: "+ note.correo +" ---direccion:"+  note.direccion)
     })
 }
 
